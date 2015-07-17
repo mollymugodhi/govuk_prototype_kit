@@ -10,6 +10,8 @@ module.exports = {
     });
 
     // add your routes here
-
+app.get('/welcome', function (req, res) {
+      res.render('welcome');
+    });
   }
 };
