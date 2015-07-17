@@ -11,7 +11,12 @@ module.exports = {
 
     // add your routes here
 app.get('/welcome', function (req, res) {
-      res.render('welcome');
+      res.render(
+        'welcome',
+        {'name': req.query.name,
+          'date': (new Date())
+        }
+      );
     });
   }
 };
